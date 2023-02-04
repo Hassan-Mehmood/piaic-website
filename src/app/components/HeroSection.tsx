@@ -2,7 +2,13 @@ import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react';
 
 export default function HeroSection() {
   return (
-    <Box as="main" px="32px" py="48px" bgImage={' linear-gradient(90deg,#e6dada,#dfedf0);'}>
+    <Box
+      as="main"
+      px="48px"
+      pt="48px"
+      pb={{ base: '48px', md: '0px' }}
+      bgImage={' linear-gradient(90deg,#e6dada,#dfedf0);'}
+    >
       <Flex
         flexDir={{ base: 'column', md: 'row' }}
         align={{ base: '', md: 'center' }}

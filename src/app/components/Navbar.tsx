@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <Box as="header" bgColor={'#035554'} position="relative">
-      <Box as="nav" maxW="1440px" mx="auto" py="16px" px="16px">
+      <Box as="nav" maxW="1440px" mx="auto" py="16px" px="32px">
         <Flex alignItems="center" justifyContent="space-between">
           <Box maxW="48px" cursor="pointer">
             <img src="/panaverse80_80.png" alt="Panaverse Logo" />
