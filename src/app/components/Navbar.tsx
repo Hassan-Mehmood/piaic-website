@@ -15,6 +15,7 @@ export default function Navbar() {
           </Box>
 
           <Box>
+            {/* Desktop Nav */}
             <UnorderedList display={{ base: 'none', lg: 'flex' }} alignItems="center" m="0px">
               <ListItem listStyleType="none" mx="25px" color="#fff">
                 <Link href="">How It Works</Link>
@@ -33,61 +34,64 @@ export default function Navbar() {
               </ListItem>
             </UnorderedList>
 
-            <UnorderedList
-              display={{ base: 'unset', lg: 'none' }}
-              m="0px"
-              position="absolute"
-              left="0"
-              width="100%"
-              top="80px"
-              bgColor="#035554"
-            >
-              <ListItem
-                listStyleType="none"
-                m="5px 0 10px 0px"
-                p="5px 25px 15px"
-                borderBottom="1px solid rgba(0,0,0,0.3)"
-                color="#fff"
+            {/* Mobile Nav */}
+            {showMobileNav === true ? (
+              <UnorderedList
+                display={{ base: 'unset', lg: 'none' }}
+                m="0px"
+                position="absolute"
+                left="0"
+                width="100%"
+                top="80px"
+                bgColor="#035554"
               >
-                <Link href="">How It Works</Link>
-              </ListItem>
-              <ListItem
-                listStyleType="none"
-                m="5px 0 10px 0px"
-                p="5px 25px 15px"
-                borderBottom="1px solid rgba(0,0,0,0.3)"
-                color="#fff"
-              >
-                <Link href="">Apply</Link>
-              </ListItem>
-              <ListItem
-                listStyleType="none"
-                m="5px 0 10px 0px"
-                p="5px 25px 15px"
-                borderBottom="1px solid rgba(0,0,0,0.3)"
-                color="#fff"
-              >
-                <Link href="">Available Programs</Link>
-              </ListItem>
-              <ListItem
-                listStyleType="none"
-                m="5px 0 10px 0px"
-                p="5px 25px 15px"
-                borderBottom="1px solid rgba(0,0,0,0.3)"
-                color="#fff"
-              >
-                <Link href="">About</Link>
-              </ListItem>
-              <ListItem
-                listStyleType="none"
-                m="5px 0 0px 0px"
-                p="5px 25px 15px"
-                borderBottom="1px solid rgba(0,0,0,0.3)"
-                color="#fff"
-              >
-                <Link href="">WIT</Link>
-              </ListItem>
-            </UnorderedList>
+                <ListItem
+                  listStyleType="none"
+                  m="5px 0 10px 0px"
+                  p="5px 25px 15px"
+                  borderBottom="1px solid rgba(0,0,0,0.3)"
+                  color="#fff"
+                >
+                  <Link href="">How It Works</Link>
+                </ListItem>
+                <ListItem
+                  listStyleType="none"
+                  m="5px 0 10px 0px"
+                  p="5px 25px 15px"
+                  borderBottom="1px solid rgba(0,0,0,0.3)"
+                  color="#fff"
+                >
+                  <Link href="">Apply</Link>
+                </ListItem>
+                <ListItem
+                  listStyleType="none"
+                  m="5px 0 10px 0px"
+                  p="5px 25px 15px"
+                  borderBottom="1px solid rgba(0,0,0,0.3)"
+                  color="#fff"
+                >
+                  <Link href="">Available Programs</Link>
+                </ListItem>
+                <ListItem
+                  listStyleType="none"
+                  m="5px 0 10px 0px"
+                  p="5px 25px 15px"
+                  borderBottom="1px solid rgba(0,0,0,0.3)"
+                  color="#fff"
+                >
+                  <Link href="">About</Link>
+                </ListItem>
+                <ListItem
+                  listStyleType="none"
+                  m="5px 0 0px 0px"
+                  p="5px 25px 15px"
+                  borderBottom="1px solid rgba(0,0,0,0.3)"
+                  color="#fff"
+                >
+                  <Link href="">WIT</Link>
+                </ListItem>
+              </UnorderedList>
+            ) : null}
           </Box>
 
           <Box display={{ base: 'none', lg: 'unset' }}>
