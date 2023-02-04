@@ -7,15 +7,15 @@ export default function Navbar() {
   const [showMobileNav, setShowMobileNav] = useState(false);
 
   return (
-    <Box as="header" bgColor={'#035554'}>
+    <Box as="header" bgColor={'#035554'} position="relative">
       <Box as="nav" maxW="1440px" mx="auto" py="16px" px="16px">
         <Flex alignItems="center" justifyContent="space-between">
           <Box maxW="48px" cursor="pointer">
             <img src="/panaverse80_80.png" alt="Panaverse Logo" />
           </Box>
 
-          <Box display={{ base: 'none', lg: 'unset' }}>
-            <UnorderedList display="flex" alignItems="center" m="0px">
+          <Box>
+            <UnorderedList display={{ base: 'none', lg: 'flex' }} alignItems="center" m="0px">
               <ListItem listStyleType="none" mx="25px" color="#fff">
                 <Link href="">How It Works</Link>
               </ListItem>
@@ -32,7 +32,64 @@ export default function Navbar() {
                 <Link href="">WIT</Link>
               </ListItem>
             </UnorderedList>
+
+            <UnorderedList
+              display={{ base: 'unset', lg: 'none' }}
+              m="0px"
+              position="absolute"
+              left="0"
+              width="100%"
+              top="80px"
+              bgColor="#035554"
+            >
+              <ListItem
+                listStyleType="none"
+                m="5px 0 10px 0px"
+                p="5px 25px 15px"
+                borderBottom="1px solid rgba(0,0,0,0.3)"
+                color="#fff"
+              >
+                <Link href="">How It Works</Link>
+              </ListItem>
+              <ListItem
+                listStyleType="none"
+                m="5px 0 10px 0px"
+                p="5px 25px 15px"
+                borderBottom="1px solid rgba(0,0,0,0.3)"
+                color="#fff"
+              >
+                <Link href="">Apply</Link>
+              </ListItem>
+              <ListItem
+                listStyleType="none"
+                m="5px 0 10px 0px"
+                p="5px 25px 15px"
+                borderBottom="1px solid rgba(0,0,0,0.3)"
+                color="#fff"
+              >
+                <Link href="">Available Programs</Link>
+              </ListItem>
+              <ListItem
+                listStyleType="none"
+                m="5px 0 10px 0px"
+                p="5px 25px 15px"
+                borderBottom="1px solid rgba(0,0,0,0.3)"
+                color="#fff"
+              >
+                <Link href="">About</Link>
+              </ListItem>
+              <ListItem
+                listStyleType="none"
+                m="5px 0 0px 0px"
+                p="5px 25px 15px"
+                borderBottom="1px solid rgba(0,0,0,0.3)"
+                color="#fff"
+              >
+                <Link href="">WIT</Link>
+              </ListItem>
+            </UnorderedList>
           </Box>
+
           <Box display={{ base: 'none', lg: 'unset' }}>
             <Button
               color="#000"
