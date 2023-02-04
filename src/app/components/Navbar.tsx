@@ -1,8 +1,11 @@
 import { Box, Button, Flex, ListItem, UnorderedList } from '@chakra-ui/react';
 import Link from 'next/link';
+import { useState } from 'react';
 import { MdOutlineMenu } from 'react-icons/md';
 
 export default function Navbar() {
+  const [showMobileNav, setShowMobileNav] = useState(false);
+
   return (
     <Box as="header" bgColor={'#035554'}>
       <Box as="nav" maxW="1440px" mx="auto" py="16px" px="16px">
@@ -47,14 +50,10 @@ export default function Navbar() {
             </Button>
           </Box>
           <Box display={{ base: 'unset', lg: 'none' }} color="#fff" cursor="pointer">
-            <MdOutlineMenu size={24} />
+            <MdOutlineMenu size={24} onClick={() => setShowMobileNav(!showMobileNav)} />
           </Box>
         </Flex>
       </Box>
     </Box>
   );
-}
-
-function phoneNav() {
-  return <div>he</div>;
 }
