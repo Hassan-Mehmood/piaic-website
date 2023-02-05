@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Courses() {
   return (
-    <Box pt="64px" mb="500px" px="64px">
+    <Box pt="64px" px="64px">
       <Box maxWidth="1440px" mx="auto">
         <Box textAlign="center" letterSpacing="5px">
           <Heading as="h3" fontSize="30px">
